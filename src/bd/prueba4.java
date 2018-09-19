@@ -25,7 +25,7 @@ public class prueba4 {
 					prueba2.mostrarSelect(stm.getResultSet());
 
 				} else {
-					// manejar updates
+					stm.executeUpdate(linea);
 				}
 			}
 		}

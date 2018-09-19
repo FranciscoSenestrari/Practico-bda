@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class prueba6 {
+public class test1 {
 
 	public static void main(String[] args) throws SQLException, IOException {
 		// TODO Auto-generated method stub

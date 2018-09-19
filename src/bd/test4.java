@@ -1,11 +1,14 @@
 package bd;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class prueba7 {
+public class test4 {
 
-	public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException, IOException {
 		// TODO Auto-generated method stub
 
 		
@@ -24,7 +27,7 @@ public class prueba7 {
 				Query();
 				break;
 			case 2:
-
+				read();
 				break;
 			case 3:
 
@@ -65,6 +68,40 @@ public class prueba7 {
 		} while (!a);
 	}
 
+	private static void read() throws IOException
+	{
+		BufferedReader reader = new BufferedReader(
+				new FileReader("D://Facu//Tercero 2018//BDA//BD Practico//Base de datos aplicada//comando.sql"));
+		String linea = "";
+		String temp = "";
+
+		StringBuilder sb = new StringBuilder();
+
+		try {
+			while ((linea = reader.readLine()) != null) {
+
+				sb.append(linea);
+
+			}
+
+			temp = sb.toString();
+
+			temp.split("[\n]");
+			String[] sd = temp.split(";");
+			
+			
+			for (String g : sd)
+			{
+				
+				System.out.println(g);
+			}
+			
+
+		} catch (IOException e ) {
+			e.printStackTrace();
+		}
+		reader.close();
+	}
 	private static void mostrarMenu() {
 		System.out.println("Sleccione la opcion deseada>");
 		System.out.println("1> Generar consulta");

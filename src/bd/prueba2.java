@@ -46,6 +46,8 @@ public class prueba2 {
 
 	public static void mostrarSelect(ResultSet rs) throws SQLException {
 
+	
+
 		ResultSetMetaData rsm = rs.getMetaData();
 
 		System.out.println("--------------------------------------------------");
@@ -64,4 +66,5 @@ public class prueba2 {
 		System.out.println("--------------------------------------------------");
 		System.out.printf("%s filas%n", contador);
 	}
+
 }

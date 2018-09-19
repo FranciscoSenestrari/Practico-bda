@@ -62,6 +62,7 @@ public final class Conexion {
 	    
 	    public static void consultar(String sql) throws SQLException
 	    {
+
 	    	if (sql.toLowerCase().trim().startsWith("select")) 
 	    	{
 	    		mostrarSelect(query(sql));
